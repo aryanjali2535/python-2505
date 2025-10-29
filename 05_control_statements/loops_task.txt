@@ -1,0 +1,23 @@
+# Simulate a OTP Verification System / Password / Bank ATM Pin
+
+-> The user will be asked to enter an 4 Digit OTP 
+
+-> The User will be given 3 Max Attempts to enter correct OTP 
+
+-> Assume the Correct OTP is already Stored 
+
+-> Aks the user to input 4 Digit OTP 
+
+-> If the OTP is not 4 Digit number display 
+
+    -> OTP Must be 4 Digit NUmber Only 
+
+-> If the OTP is 4 Digit number and also correct OTP 
+
+    -> Correct OTP - SUCCESS 
+
+-> If the OTP is incorrect, decrease the Attempts Count 
+
+-> After 3 Attempts display
+
+    -> Maximum Attempts Reached, Try After 24 Hours 
