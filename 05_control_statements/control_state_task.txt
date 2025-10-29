@@ -51,3 +51,4 @@ for multiple subjects
    Enter Score For Subject 2: 90
    Do you want to enter with another score ? (yes/no) no 
    // start working with logics  
+   
