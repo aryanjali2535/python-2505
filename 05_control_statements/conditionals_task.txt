@@ -40,3 +40,4 @@ Display a detailed summary
     Total discount
     Discount amount saved
     Final tuition fee after discount
+    
