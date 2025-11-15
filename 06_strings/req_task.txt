@@ -1,0 +1,47 @@
+# Enhanced Student Grade Tracker 
+
+-> Student ID 
+
+    -> In previous Application (control_stmts_task.py) 
+    If we give ID as text it's accepting, now it should
+    only accept numbers (non-zero and non-negative)
+
+    -> Simulate System Generated ID 
+
+        -> If user gives 101 - Transform it like below 
+
+            -> UNIVERSITY-LEARNER-ID 
+            -> EDIFY-LEARNER-101 
+
+-> Student Name 
+
+    -> In previous Application (control_stmts_task.py) 
+    If we give Name as numerics it's accepting, now it should
+    only accept Alphabets(no symbols and no numerics) 
+
+    -> Format Name Like Below 
+
+        -> ravi krishna => Ravi Krishna  
+
+    -> Name should be minimum 4 characters 
+
+        -> ra (invalid)
+        -> ravi (valid)
+
+-> Simulate System Generated EMAIL 
+
+    -> Extract the fist name 
+    -> Get the id 
+    -> fist_name.id@UNIVERSITY.edu 
+    -> ravi.101@edify.edu 
+
+-> Add Course Fee Calculation 
+
+    -> Take Course Fee as input - 30000 
+    -> Fee shouldn't be zero or negative
+    -> Ask for coupon code 
+    -> PROMO - give 5000 as discount (25000)
+    -> FIFTYOFF - give 50% discount on Course Fee (15000)
+
+
+            
