@@ -1,0 +1,20 @@
+# Continued From 17_oops_style 
+
+-> In Current System We Have 
+
+    -> Student Entity 
+
+    -> Trainer Entity 
+
+    -> NEW CHANGE
+        
+        -> Other Entities can be expected in future (Admin, VideoAdmin, Mentor etc)
+
+        -> These Entities might have some common reusable attributes 
+
+        -> Will Define common reusable attributes in a Parent class like Person 
+
+            -> Student is a Person 
+            -> Trainer is a Person 
+            -> Admin is a Person 
+            -> etc 
