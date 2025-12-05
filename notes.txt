@@ -215,7 +215,7 @@
 
             -> Temporary, once we close python session, all code is gone (not recommended)
 
-            -> Open CMD / TERMINAL 
+            -> Openx CMD / TERMINAL 
 
                 -> python in CMD 
                 -> python3 in TERMINAL
@@ -1647,6 +1647,8 @@
 
     -> Class Members 
 
+    -> Static Members 
+
     -> OOP Principals
 
 
@@ -1749,3 +1751,336 @@
                     def __init__(self, attribute1, attribute2):
                         self.attribute1 = attribute1
                         self.attribute2 = attribute2
+
+21st Nov 2025
+=============
+
+    -> Instance Members 
+    
+        -> Instance Variables & Instance Methods (instance is object)
+
+    -> Instance Variables / Attributes 
+
+        -> Instance Variables belongs to an object i.e instance, not the class 
+
+        -> Instance Variables are defined in the __init__ method using self keyword 
+
+        -> Each Object you create has it's own copy of instance variable with different values 
+
+        -> Modifying an instance variable in one object, doesn't affect the same variable
+            in other objects 
+
+        -> Accessed via self.variable_name
+
+        -> syntax
+
+            class Demo:
+                def __init__(self,value):
+                    self.instance_var = value 
+
+    -> Instance Methods 
+
+        -> Methods which are defined inside a class which 
+            operates on instance variables i.e operate on object
+
+        -> Instance Methods are very commonly used types of methods in OOP 
+
+        -> Instance Methods always take "self" as the first parameter 
+
+        -> Instance Methods can access instance variables and also class variables too 
+
+        -> Called using object_name.method()
+
+    
+    -> Class Members 
+    
+        -> Class Variables & Class Methods (class based, not object based)
+
+    -> Class Variables 
+
+        -> Class Variables are shared across all the instances of class 
+            i.e shared by all the objects of the class 
+
+        -> Class Variables belong to class, rather than objects, ideal for  
+            storing data that is common/fixed for all objects 
+
+        -> Defined inside the class, but outside the methods 
+
+        -> Accessed using Classname.variable_name or object.variable_name 
+
+            -> recommended is using Classname.variable_name
+
+        -> NOTE : If Class Variables are changed, the change is reflected in 
+            all the instances unlike instance vars 
+
+        -> Class Variables are memory efficient as only one copy is there unlike multiple copies like objects 
+
+        -> syntax
+
+            class Demo:
+                class_var = "i'm shared data"
+
+    -> Class Methods 
+
+        -> Methods inside the class, which operates on class variables 
+
+        -> Not very commonly used 
+
+        -> Class Methods take "cls" as the first parameter 
+
+        -> Class Methods are defined using @classmethod decorator 
+
+        -> Can be accessed using Class Name or object, recommended is Classname 
+
+        -> Accessing instance data inside a class method gives error 
+        
+
+
+    -> Static Members 
+    
+        -> No Static Variables & Static Methods are present 
+
+        -> In python we don't have Static Variables 
+
+            -> In other languages like java static variable is equivalent to Class Variable 
+
+            -> Static Variable == Class Variable
+
+
+    -> Static Methods 
+
+            -> Static Methods are not bound to either class or object 
+
+            -> Static Methods does not depend on instance variable or class variable 
+
+            -> Not a commonly used method 
+
+            -> Don't take self or cls as first parameter 
+
+            -> NOTE : Behaves like a normal function, but inside a class  
+
+            -> Declared used @staticmethod decorator 
+
+            -> Used as utilities / helper functions 
+    
+
+25th Nov 2025
+=============
+
+    -> Learning Management System (LMS)
+
+    -> Idea : How to use classes, objects and methods
+
+26th Nov 2025
+=============
+
+    -> Learning Management System (LMS) Continued 
+
+
+28th Nov 2025
+=============
+
+    -> 4 Pillars Of OOP 
+
+        -> Inheritance 
+
+        -> Encapsulation
+
+        -> Abstraction
+
+        -> Polymorphism
+    
+
+    -> Inheritance 
+
+        -> Inheritance is a core OOP concept where a new class, 
+        called a subclass or child class, acquires the properties(vars) and methods 
+        of an existing class, called a superclass or parent class.
+        
+        -> Main purpose of Inheritance is Code Reusability
+        
+        -> Syntax 
+
+            class Parent:
+                pass 
+
+            class Child(Parent):
+                pass 
+
+        -> With Inheritance
+
+            -> Code Reusability
+
+            -> No Code Duplication 
+
+            -> Project Size is less 
+
+            -> Code Reliability improved 
+
+            -> Code Maintainability improved
+
+
+    -> Types Of Inheritance 
+
+        -> Single Level Inheritance
+
+            -> One Parent -> One Child 
+
+        -> Multi Level Inheritance 
+
+            -> GrandParent -> Parent -> Child 
+
+        -> Multiple Inheritance 
+
+            -> One Child -> Multiple Parents 
+
+        -> Hierarchial Inheritance
+
+            -> One Parent -> Multiple Child 
+
+        -> Hybrid Inheritance
+
+            -> Combination or two or more types 
+
+29th Nov 2025
+=============
+
+    -> How To Apply Inheritance 
+
+
+2nd Dec 2025
+=============
+
+    -> Encapsulation 
+
+         -> Encapsulation is a core concept in object-oriented programming (OOP) that binds
+         data (attributes) and the methods that operate on that data into a single unit, 
+         called as a class.
+
+        -> This process involves restricting direct access to an object's internal state, 
+            which is a principle known as "data hiding" 
+
+        -> Other Languages like Java or C++ enforces Strict Rules for Encapsulation,  
+            coming to python there is no enforcing 
+
+                -> Java/C++ = “You’re not allowed.” 
+                -> Python = “You shouldn’t, but you can if you insist.”
+
+        -> While Python does not have strict access modifiers like private or protected 
+        keywords found in some other languages, 
+        python uses "naming conventions" to indicate the intended visibility of members.
+
+        -> Hide Data 
+
+            -> We have Public 
+
+                -> Without any special prefix are considered public and 
+                    can be accessed from anywhere
+
+            -> We Have Private 
+
+                -> prefixed with a double underscore (__) trigger
+
+                -> Cannot be accessed from outside
+
+                -> print(obj._MyClass__private_variable) # Accessing through mangled name is possible
+
+                    -> You shouldn’t, but you can if you insist.
+ 
+            
+            -> We Have Protected 
+
+                -> prefixed with a single underscore (_) trigger
+
+                -> This signals to other developers that the attribute is intended for 
+                internal use within the class and its subclasses, 
+                and should not be directly accessed or modified from outside the class.
+
+
+3rd Dec 2025
+=============
+
+    -> Encapsulation Implementation
+
+4th Dec 2025
+=============
+
+    -> Abstraction
+
+        -> Abstraction in OOP is a principle that involves "hiding" complex "implementation" 
+        details and showing only the essential features of an object to the user. 
+        
+        -> Abstraction simplifies complex systems by breaking them into manageable components,
+            reusable, and easier to maintain. 
+        
+        -> Hiding implementation: Abstraction hides the internal workings of an object 
+        and presents a simplified view. For example, when using an ATM, you only 
+        interact with a simple interface (card, PIN, cash dispenser) without needing 
+        to know the complex process of backend banking operations that occur. 
+
+        -> Abstraction is achieved through abstract classes and interfaces, 
+            which define a blueprint without exposing the underlying code.
+
+        -> Providing an interface: It defines a contract 
+        (using abstract classes or interfaces) that specifies 
+        what a class can do, without dictating how it does it. 
+
+        -> Ensuring security: By controlling what is exposed, 
+        abstraction protects the internal data and logic from unintended 
+        access or misuse. 
+
+    
+    -> How To Achieve Abstraction In python 
+
+            -> An abstract class in Python functions as a blueprint for other classes, 
+            defining a common interface or structure that subclasses must adhere to. 
+            It cannot be instantiated directly, meaning you cannot create objects 
+            of an abstract class. 
+            
+            -> Abstract classes are implemented in Python using the 
+                abc module (Abstract Base Classes)
+
+                ->  from abc import ABC, abstractmethod
+            
+                -> Create a class that inherits from ABC. 
+                Inside this class, define one or more abstract methods using 
+                the @abstractmethod decorator. 
+                Abstract methods are declared but do not have an implementation 
+                (they typically contain pass).
+
+            -> Implement Subclasses: Create concrete subclasses that inherit from the 
+            abstract class. These subclasses must implement all abstract methods defined 
+            in the abstract parent class. 
+            If a subclass fails to implement any abstract method, 
+            it will also become an abstract class and cannot be instantiated.
+
+            -> Abstract Class -> Class -> Object
+
+5th Dec 2025
+=============
+
+    -> Polymorphism 
+
+        -> Polymorphism in OOP is the ability of an object, method, or variable 
+        to take on "many forms", allowing for a single interface 
+        to represent different underlying implementations. 
+
+        -> Polymorphism is achieved through techniques like 
+            "method overloading" and "method overriding"
+
+        -> Overloading in OOP is the ability to define multiple methods or functions 
+            with the same name but different parameter lists 
+            (number, type, or order of arguments) within a single class
+        
+        -> NOTE: Python does not support traditional method overloading 
+
+        -> Method Overriding
+
+            -> When a subclass provides a new implementation of a method 
+            that already exists in parent class 
+
+    -> From 20th Nov 2025, the style of code we did is using OOP paradigm 
+
+    -> GitHub Link : https://github.com/ravi2krishna/python-2522.git
+
+    -> Fork Above Repo 
